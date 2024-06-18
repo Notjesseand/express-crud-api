@@ -4,10 +4,12 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const product = require("../models/productsModel");
 const productRoute = require("../routes/product.routes");
+import cors from "cors";
 
 // middleware
 app.use(morgan("tiny"));
 app.use(express.json());
+app.use(cors());
 // to enable addition of data to database in non json format like form data
 app.use(express.urlencoded({ extended: false }));
 
