@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const product = require("../models/productsModel");
 const productRoute = require("../routes/product.routes");
-import cors from "cors";
+const cors = require("cors");
 
 // middleware
 app.use(morgan("tiny"));
